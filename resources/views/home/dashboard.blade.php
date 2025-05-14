@@ -11,12 +11,15 @@
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 w-full bg-gray-200 p-4 flex justify-between items-center shadow-md z-50">
         <h1 class="text-lg font-bold">Sistem Rekomendasi Pemupukan</h1>
-        <button class="bg-blue-600 text-white px-4 py-2 rounded flex items-center">
-            <span class="mr-2">Logout</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h8.586l-3.293-3.293a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L12.586 11H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-            </svg>
-        </button>
+        <a href="{{ url('/login') }}"
+                class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-1 rounded-lg flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 10a1 1 0 011-1h8.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L12.586 11H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd" />
+                </svg>
+                Logout
+            </a>
     </nav>
     
     

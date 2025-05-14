@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sistem Rekomendasi Pupuk</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    @vite('resources/css/app.css')
 </head>
-<body class="relative w-full h-screen">
+
+<form action="{{ route('login') }}" method="POST" class= "relative w-full h-screen">
+    @csrf
     <!-- Background Image -->
     <img src="{{ asset('img/homegambar.jpg') }}" alt="Background" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-black opacity-30"></div> s
+    <div class="absolute inset-0 bg-black opacity-30"></div> 
 
     <!-- Login Form -->
     <div class="relative z-10 flex items-center justify-center h-full">
         <div class="bg-white bg-opacity-40 backdrop-blur-md rounded-lg shadow-lg p-8 w-96 border border-gray-200">
             <h2 class="text-2xl font-semibold text-center text-black">Login</h2>
-
-            <form class="mt-4">
+            
+            <div class= "mt-4">
                 <!-- Email Input -->
                 <div class="mb-4">
                     <label for="email" class="block text-black font-normal">Email</label>
@@ -33,7 +36,7 @@
 
                 <!-- Buttons -->
                 <div class="flex justify-between mt-6">
-                    <button type="button"
+                    <button type="submit"
                         class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">
                         Login
                     </button>
@@ -42,8 +45,8 @@
                         Daftar
                     </a>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
-</body>
+</form>
 </html>
